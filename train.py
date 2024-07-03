@@ -317,7 +317,7 @@ def train_syndiff(rank, gpu, args):
         if not os.path.exists(exp_path):
             os.makedirs(exp_path)
             copy_source(__file__, exp_path)
-            shutil.copytree('./backbones', os.path.join(exp_path, 'backbones'))
+            shutil.copytree('/content/SynDiff/backbones', os.path.join(exp_path, 'backbones'))
     
     
     coeff = Diffusion_Coefficients(args, device)
