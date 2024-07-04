@@ -18,11 +18,16 @@ cuda=>11.2
 ninja
 python3.x-dev (apt install, x should match your python3 version, ex: 3.8)
 ```
+Can be installed via
+```
+!pip install -r /SynDiff/requirements.txt
+```
+
 
 ## Installation
 - Clone this repo:
 ```bash
-git clone https://github.com/icon-lab/SynDiff
+git clone https://github.com/paulaheupel/SynDiff.git
 cd SynDiff
 ```
 
