@@ -1,6 +1,6 @@
-# SynDiff
+# SynDiff - with slight changes for Assignment 4 of the course Applied Machine Learning (Radboud University - 2024)
 
-Official PyTorch implementation of SynDiff described in the [paper](https://arxiv.org/abs/2207.08208).
+Forked and slightly adjusted version of the [PyTorch implementation of SynDiff](https://github.com/icon-lab/SynDiff) described in the [paper](https://arxiv.org/abs/2207.08208).
 
 Muzaffer Özbey, Onat Dalmaz, Salman UH Dar, Hasan A Bedel, Şaban Özturk, Alper Güngör, Tolga Çukur, "Unsupervised Medical Image Translation with Adversarial Diffusion Models", arXiv 2022.
 
@@ -10,6 +10,7 @@ Muzaffer Özbey, Onat Dalmaz, Salman UH Dar, Hasan A Bedel, Şaban Özturk, Alpe
 
 ## Dependencies
 
+Originally mentioned dependencies:
 ```
 python>=3.6.9
 torch>=1.7.1
@@ -18,9 +19,10 @@ cuda=>11.2
 ninja
 python3.x-dev (apt install, x should match your python3 version, ex: 3.8)
 ```
-Can be installed via
+
+Slightly different but (also with newer python versions) functioning requirements can be installed via
 ```
-!pip install -r /SynDiff/requirements.txt
+pip install -r /SynDiff/requirements.txt
 ```
 
 
@@ -48,7 +50,7 @@ input_path/
 
 where .mat files has shape of (#images, width, height) and image values are between 0 and 1.0. 
 ### Sample Data
-Sample toy data can also found under 'SynDiff_sample_data' folder of the repository. 
+Sample toy data can also be found under 'SynDiff_sample_data' folder of the repository. 
 
 
 
@@ -63,7 +65,7 @@ python3 train.py --image_size 256 --exp exp_syndiff --num_channels 2 --num_chann
 <br />
 
 ## Pretrained Models
-We have released pretrained diffusive generators for [T1->PD and PD->T1](https://drive.google.com/file/d/1Hfvnz29NaTFqPMX6RGaEv4Qnt8HeoxZz/view?usp=sharing) tasks in IXI and [T1->T2 and T2->T1](https://drive.google.com/file/d/1zGzZPVY-Xp2Flc7GicOD7s4taxcjwCsn/view?usp=sharing) tasks in BRATS datasets. You can save these weights in relevant checkpoints folder and perform inference.
+The authors have released pretrained diffusive generators for [T1->PD and PD->T1](https://drive.google.com/file/d/1Hfvnz29NaTFqPMX6RGaEv4Qnt8HeoxZz/view?usp=sharing) tasks in IXI and [T1->T2 and T2->T1](https://drive.google.com/file/d/1zGzZPVY-Xp2Flc7GicOD7s4taxcjwCsn/view?usp=sharing) tasks in BRATS datasets. You can save these weights in relevant checkpoints folder and perform inference.
 
 ## Test
 
@@ -78,8 +80,8 @@ python test.py --image_size 256 --exp exp_syndiff --num_channels 2 --num_channel
 
 
 # Citation
-Preliminary versions of SynDiff are presented in [NeurIPS Medical Imaging Meets](https://www.cse.cuhk.edu.hk/~qdou/public/medneurips2022/105.pdf) and IEEE ISBI 2023.
-You are encouraged to modify/distribute this code. However, please acknowledge this code and cite the paper appropriately.
+This repo is based on the following work and ecnorporates slight changes.
+
 ```
 @misc{özbey2023unsupervised,
       title={Unsupervised Medical Image Translation with Adversarial Diffusion Models}, 
